@@ -1,0 +1,99 @@
+apiVersion: digital-employee/v1
+kind: DigitalEmployee
+metadata:
+  id: de_creator_brand_deal_manager
+  name: 商单对接管家
+  alias: null
+  repo: de-creator-brand-deal-manager
+  card_no: 5.4-7
+  group: creator
+  group_label: 自媒体从业者
+  phase: P2 后期（受众窄，待首发三件套验证后启动）
+  complexity: S-M：报价基准库建设为主要工作量，总估 5-8 人日
+  score: 18
+  price: ¥50-100/月或按单付费（据 R2 调研）
+  channels:
+  - GitHub（必备基础渠道）
+  - 小红书
+  - 闲鱼
+  - 淘宝（报价模板/结案模板适配货架电商按单售卖）
+  - 千问办公
+  license: Proprietary
+  version: 1.0.0
+spec:
+  positioning: 帮中腰部博主建立报价体系、不再贱卖流量的商务助理
+  users: '有商单能力的腰部以上创作者（受众较窄，据 R2 调研痛点 #8）'
+  boundary: 做：brief 结构化、报价锚定、合规审查、结案报告；不做：代签合同、代收款项、法律意见（仅提示风险，建议人工复核）
+  kpi: 报价响应时长从 days 缩至 hours；商单合规审查覆盖率 100%；结案报告交付率 100%（直接挂钩续约率）
+  roi_summary: 直接工时节省有限（月约 6h），核心价值在报价合理化增收与合规止损，适合按单付费
+  demand_refs:
+  - D05
+  - D10
+  demand_support: 中等
+  demand_evidence: 中｜受众窄，P2 排期合理
+runtime:
+  system_prompt: persona/system-prompt.md
+  boundary: persona/boundary.md
+  kpi: persona/kpi.md
+deliverables:
+  skills:
+  - slug: ad-compliance-review
+    name: 广告合规审查
+    kind: private
+    path: skills/ad-compliance-review
+    version: 1.0.0
+    maturity: contract-complete
+  - slug: brief-parser
+    name: brief 解析
+    kind: private
+    path: skills/brief-parser
+    version: 1.0.0
+    maturity: contract-complete
+  - slug: quote-calculator
+    name: 报价测算
+    kind: private
+    path: skills/quote-calculator
+    version: 1.0.0
+    maturity: contract-complete
+  workflows:
+  - slug: wf-creator-brand-registry
+    name: brief 解读与需求清单
+    path: workflows/wf-creator-brand-registry
+    version: 1.0.0
+    phase: P2
+    calls:
+    - brief-parser
+  - slug: wf-creator-brand-quote
+    name: 报价单生成
+    path: workflows/wf-creator-brand-quote
+    version: 1.0.0
+    phase: P2
+    calls:
+    - quote-calculator
+  - slug: wf-creator-brand-compliance
+    name: 商单内容合规审查
+    path: workflows/wf-creator-brand-compliance
+    version: 1.0.0
+    phase: P2
+    calls:
+    - ad-compliance-review
+    - compliance-word-scan
+  - slug: wf-creator-brand-closeout-report
+    name: 结案数据报告
+    path: workflows/wf-creator-brand-closeout-report
+    version: 1.0.0
+    phase: P2
+    calls:
+    - brief-generator
+    - copy-layout
+  knowledge_base: kb/
+  connectors: connectors/bindings.yaml
+external_dependencies:
+- repo: agent-skills-core
+  version: 1.0.0
+  skills:
+  - brief-generator
+  - compliance-word-scan
+  - copy-layout
+  resolution: external
+spec_only_dependencies: []
