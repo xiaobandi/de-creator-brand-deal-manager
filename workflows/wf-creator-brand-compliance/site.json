@@ -1,0 +1,15 @@
+{
+  "name": "wf-creator-brand-compliance",
+  "title": "商单内容合规审查",
+  "kind": "workflow",
+  "owner": "de-creator-brand-deal-manager",
+  "complexity": "M",
+  "phase": "P2",
+  "one_liner": "商单稿→广告法敏感词专项校验→修改建议",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}

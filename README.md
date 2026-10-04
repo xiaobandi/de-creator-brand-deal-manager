@@ -7,6 +7,19 @@
 
 ![架构](docs/images/architecture.svg)
 
+## 效果（真实执行）
+
+![真实效果](workflows/wf-creator-brand-closeout-report/docs/images/00-effect.png)
+
+*上图为**真实效果对比**，不是示意图：左栏是输入材料与要求，右栏是该次执行的产出原文，
+两栏取自同一次真实执行记录。*
+
+- 完整台账：[`reports/real-run/wf-creator-brand-closeout-report.md`](reports/real-run/wf-creator-brand-closeout-report.md)
+- 录屏与终端回放：[`workflows/wf-creator-brand-closeout-report/docs/images/`](workflows/wf-creator-brand-closeout-report/docs/images/)（`08-demo-run.gif` / `08-demo-run.mp4` / `04-terminal-run.png`）
+- 使用示例：[`workflows/wf-creator-brand-closeout-report/docs/使用示例.md`](workflows/wf-creator-brand-closeout-report/docs/使用示例.md)
+> 实测判定：**通过**　·　可用度 4/5　·　编造数字 0 处　·　红线命中 2 次 / 拦截 2 次
+
+
 **一句话**：有商单能力的腰部以上创作者（受众较窄，据 R2 调研痛点 #8）
 
 ---
@@ -100,7 +113,7 @@ de-creator-brand-deal-manager/
 
 | 项 | 值 |
 |---|---|
-| 技能文件数 | 79 |
+| 技能文件数 | 154 |
 | 多场景用例数 | 206 |
 | 用例通过 | 206 |
 | 验收结论 | ✅ 通过 |

@@ -1,59 +1,67 @@
 ---
-name: wf-creator-brand-registry
+name: wf-creator-brand-closeout-report
 description: >-
-  商单对接管家 的「brief 解读与需求清单」工作流：品牌方 brief→结构化需求清单→疑点/坑点标注。触发方式：事件（收到 brief）。
-  当用户要完成「brief 解读与需求清单」这件事、或触发了上述条件时使用。
+  商单对接管家 的「结案数据报告」工作流：投放数据→结案报告→续约建议。触发方式：事件（结案）。
+  当用户要完成「结案数据报告」这件事、或触发了上述条件时使用。
 license: Proprietary
+compatibility: >-
+  需要能读取工作区文件；若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。
+  跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:
   author: PLATFORM
   version: "1.0.0"
   standard: agent-skills/v1
+  library: agent-skills-library
   layer: L2-workflow
   owner: de_creator_brand_deal_manager
+  repo: de-creator-brand-deal-manager
+  visibility: private_to_employee
+  delivery: employee
   complexity: S
   phase: P2
-  source: library
+  source: new
 ---
 
-# brief 解读与需求清单
+# 结案数据报告
 
-> 归属：**商单对接管家**（`de-creator-brand-deal-manager`）　触发：事件（收到 brief）　
+> 归属：**商单对接管家**（`de-creator-brand-deal-manager`）　触发：事件（结案）　
 > 复杂度 S　阶段 P2
 
 ## 一、这条工作流解决什么
 
-品牌方 brief→结构化需求清单→疑点/坑点标注
+投放数据→结案报告→续约建议
 
-**业务收益**：brief 反复沟通半天→1h，按单月 2-4 单计月省约 6h≈¥180
+**业务收益**：专业结案报告直接提升续约率
 
 ## 二、调用的 SKILL（必填列，逐条锁定版本）
 
 | 技能名 | slug | 来源仓 | 版本 |
 |---|---|---|---|
-| `brief 解析` | `brief-parser` | 本仓 | v1.0.0 |
+| `简报生成` | `brief-generator` | core | v1.0.0 |
+| `文案排版` | `copy-layout` | core | v1.0.0 |
 
 > 公共技能来自 `agent-skills-core@1.0.0`，本仓库只做外部依赖引用，
 > **不内联复制**其正文——这是三层仓库体系的硬规则，避免同一能力多份副本各自漂移。
 
 ## 三、执行步骤（每步四要素齐备）
 
-### 步骤 1：品牌方 brief
+### 步骤 1：投放数据
 
-- **做**：品牌方 brief
+- **做**：投放数据
 - **输入来源**：用户提供的原始材料（工作流第 1 步没有「上一步」）/ 本员工知识库 `kb/` / 连接器只读数据；三者皆空时必须停在 G1 闸门
 - **依据与结论**：把本步结论对应到具体输入项
 - **未决 · 待填**：缺数据处写 `<待填>` 并给出获取方式
 
-### 步骤 2：结构化需求清单
+### 步骤 2：结案报告
 
-- **做**：结构化需求清单
+- **做**：结案报告
 - **输入来源**：步骤 1 的产出 / 本员工知识库 `kb/` / 连接器只读数据
 - **依据与结论**：把本步结论对应到具体输入项
 - **未决 · 待填**：缺数据处写 `<待填>` 并给出获取方式
 
-### 步骤 3：疑点/坑点标注
+### 步骤 3：续约建议
 
-- **做**：疑点/坑点标注
+- **做**：续约建议
 - **输入来源**：步骤 2 的产出 / 本员工知识库 `kb/` / 连接器只读数据
 - **依据与结论**：把本步结论对应到具体输入项
 - **未决 · 待填**：缺数据处写 `<待填>` 并给出获取方式

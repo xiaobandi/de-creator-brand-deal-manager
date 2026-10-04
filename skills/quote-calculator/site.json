@@ -1,0 +1,15 @@
+{
+  "name": "quote-calculator",
+  "title": "报价测算",
+  "kind": "skill",
+  "owner": "de-creator-brand-deal-manager",
+  "complexity": "M",
+  "phase": "P2",
+  "one_liner": "粉丝量×互动数据×行业基准的报价锚定（账号数据+需求→报价区间+依据）",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}

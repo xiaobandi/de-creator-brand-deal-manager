@@ -1,0 +1,15 @@
+{
+  "name": "brief-parser",
+  "title": "brief 解析",
+  "kind": "skill",
+  "owner": "de-creator-brand-deal-manager",
+  "complexity": "S",
+  "phase": "P2",
+  "one_liner": "品牌需求文档结构化拆解（brief 文档→需求清单+风险标注）",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}

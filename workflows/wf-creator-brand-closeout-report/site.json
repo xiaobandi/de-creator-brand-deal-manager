@@ -1,0 +1,15 @@
+{
+  "name": "wf-creator-brand-closeout-report",
+  "title": "结案数据报告",
+  "kind": "workflow",
+  "owner": "de-creator-brand-deal-manager",
+  "complexity": "S",
+  "phase": "P2",
+  "one_liner": "投放数据→结案报告→续约建议",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}
