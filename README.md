@@ -5,6 +5,12 @@
 > **5.4-7**　·　自媒体从业者　·　阶段 P2 后期（受众窄，待首发三件套验证后启动）　·　
 > 复杂度 S-M：报价基准库建设为主要工作量，总估 5-8 人日　·　¥50-100/月或按单付费（据 R2 调研）　·　定义卡 5.4-7
 
+## 演示（真实执行录播）
+
+![演示](workflows/wf-creator-brand-closeout-report/docs/images/08-demo-run.gif)
+
+*真实执行回放（GIF 自动循环，非摆拍）· [▶ 观看完整版 MP4](workflows/wf-creator-brand-closeout-report/docs/images/08-demo-run.mp4) · 台账见 [`reports/real-run/wf-creator-brand-closeout-report.md`](reports/real-run/wf-creator-brand-closeout-report.md)*
+
 ![架构](docs/images/architecture.svg)
 
 ## 效果（真实执行）
@@ -58,6 +64,7 @@ python3 tests/run.py            # 先跑一遍自检，确认环境与契约都�
 
 ```text
 de-creator-brand-deal-manager/
+├── employee.md            # 人读定义卡（12 主字段 + 2 扩展组，由 employee.yaml 生成）
 ├── employee.yaml          # 机器契约（能力清单 + 依赖锁）
 ├── dependencies.yaml      # 对 core 的外部依赖（含版本）
 ├── persona/               # 运行提示词 / 边界 / KPI
