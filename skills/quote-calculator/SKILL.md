@@ -3,7 +3,7 @@ name: quote-calculator
 description: >-
   报价测算：粉丝量×互动数据×行业基准的报价锚定。当任务涉及账号数据+需求的处理、且目标产出是报价区间+依据时使用——
   即使没有直接说出「报价测算」这个词，只要意图吻合也应触发。
-license: Proprietary
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件；若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。
   跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。

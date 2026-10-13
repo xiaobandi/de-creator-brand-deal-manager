@@ -3,7 +3,7 @@ name: wf-creator-brand-quote
 description: >-
   商单对接管家 的「报价单生成」工作流：粉丝量×历史数据→报价区间+锚定依据→报价单。触发方式：人工。
   当用户要完成「报价单生成」这件事、或触发了上述条件时使用。
-license: Proprietary
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件；若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。
   跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。

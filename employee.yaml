@@ -18,7 +18,7 @@ metadata:
   - 闲鱼
   - 淘宝（报价模板/结案模板适配货架电商按单售卖）
   - 千问办公
-  license: Proprietary
+  license: Apache-2.0
   version: 1.0.0
 spec:
   positioning: 帮中腰部博主建立报价体系、不再贱卖流量的商务助理

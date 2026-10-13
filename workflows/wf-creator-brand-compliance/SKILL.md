@@ -3,7 +3,7 @@ name: wf-creator-brand-compliance
 description: >-
   商单对接管家 的「商单内容合规审查」工作流：商单稿→广告法敏感词专项校验→修改建议。触发方式：事件（交稿前）。
   当用户要完成「商单内容合规审查」这件事、或触发了上述条件时使用。
-license: Proprietary
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件；若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。
   跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
